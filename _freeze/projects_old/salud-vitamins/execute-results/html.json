@@ -1,0 +1,15 @@
+{
+  "hash": "bc27efddccf3e6c9f7c928c53c2d3530",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Salud Vitamins\"\nformat:\n  html:\n    lightbox: true\n    page-layout: full\n---\n\n::: {.project-intro}\nSalud Vitamins brings a fresh perspective to wellness products with clean, modern packaging and a commitment to quality. This photography series highlights the brand's aesthetic while emphasizing the purity and vibrancy of the products through natural light and minimalist styling.\n:::\n\n::: {.masonry-grid}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

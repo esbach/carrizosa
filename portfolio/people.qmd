@@ -1,0 +1,26 @@
+---
+title: "People | Cristina Carrizosa Photography"
+description: "Interior and architectural photography by Cristina Carrizosa. Professional photography for interior designers, architects, and luxury residential spaces."
+format:
+  html:
+    lightbox: true
+    page-layout: full
+---
+
+::: {.project-intro}
+I photograph people with an emphasis on authenticity and connection — capturing lifestyle moments, portraits, and fashion stories that feel natural, cinematic, and alive.
+:::
+
+::: {.masonry-grid}
+```{r}
+#| echo: false
+#| results: asis
+
+# Auto-generate masonry grid from folder
+image_files <- list.files("../images/portfolio/people/web", full.names = TRUE, pattern = "\\.(jpg|jpeg|png|webp|gif)$")
+
+for (img in image_files) {
+  cat(sprintf('![](%s){.gallery-img loading="lazy" group="people"}\n\n', img))
+}
+```
+:::

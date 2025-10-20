@@ -1,0 +1,15 @@
+{
+  "hash": "f716310770d68ce3e5d91a6c4f1d8e33",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Botanical Photography | Cristina Carrizosa Photography\"\ndescription: \"Lifestyle and brand photography portfolio by Cristina Carrizosa. Commercial photography for Amazon, Tiffany & Co., Adidas and other leading brands.\"\nformat:\n  html:\n    lightbox: true\n    page-layout: full\n---\n\n::: {.project-intro}\nThrough flowers and botanical forms, I explore light, texture, and the quiet beauty of transience. My current work with the Dahlia Society of California celebrates San Francisco’s official flower and its century-long legacy of color, design, and devotion.\n:::\n\n::: {.masonry-grid}\n![](../images/portfolio/botanical/web/botanical01.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical02.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical03.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical04.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical05.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical06.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical07.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical08.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical09.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical10.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical11.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical12.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical13.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical14.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical15.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical16.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n\n![](../images/portfolio/botanical/web/botanical17.jpg){.gallery-img loading=\"lazy\" group=\"botanical\"}\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

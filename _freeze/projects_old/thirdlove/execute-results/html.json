@@ -1,0 +1,15 @@
+{
+  "hash": "615eca7933eae0f26a8674b10b29d735",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"ThirdLove\"\nformat:\n  html:\n    lightbox: true\n    page-layout: full\n---\n\n::: {.project-intro}\nThirdLove bras are a line of lingerie from the brand ThirdLove, known for its focus on fit, comfort, and size inclusivity, particularly with its invention of half-cup sizes. \n:::\n\n::: {.masonry-grid}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

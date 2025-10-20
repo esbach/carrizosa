@@ -1,0 +1,17 @@
+{
+  "hash": "035db426b1f9b704398c0d6b314f5caa",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Interior Photography | Architectural Photographer\"\ndescription: \"Interior and architectural photography by Cristina Carrizosa. Professional photography for interior designers, architects, and luxury residential spaces.\"\nformat:\n  html:\n    lightbox: true\n    page-layout: full\n---\n\n::: {.client-section}\n::: {.client-header}\n<div class=\"client-label\">Client List</div>\n<div class=\"client-names\">\nAnthropologie • West Elm • Room & Board • Design Within Reach • CB2 • Restoration Hardware • Studio McGee • Amber Interior Design • Jensen Interiors • Local residential clients throughout the Bay Area\n</div>\n:::\n:::\n\n::: {.masonry-grid}\n![Interior photography by Cristina Carrizosa - home-1](../images/interior/home-1.jpg){.gallery-img loading=\"lazy\" group=\"interior-gallery\"}\n\n![Interior photography by Cristina Carrizosa - home-2](../images/interior/home-2.jpg){.gallery-img loading=\"lazy\" group=\"interior-gallery\"}\n\n![Interior photography by Cristina Carrizosa - home-3](../images/interior/home-3.jpg){.gallery-img loading=\"lazy\" group=\"interior-gallery\"}\n\n![Interior photography by Cristina Carrizosa - home-4](../images/interior/home-4.jpg){.gallery-img loading=\"lazy\" group=\"interior-gallery\"}\n\n![Interior photography by Cristina Carrizosa - home-5](../images/interior/home-5.jpg){.gallery-img loading=\"lazy\" group=\"interior-gallery\"}\n\n![Interior photography by Cristina Carrizosa - home-6](../images/interior/home-6.jpg){.gallery-img loading=\"lazy\" group=\"interior-gallery\"}\n\n![Interior photography by Cristina Carrizosa - hospitality-1](../images/interior/hospitality-1.webp){.gallery-img loading=\"lazy\" group=\"interior-gallery\"}\n\n![Interior photography by Cristina Carrizosa - marin](../images/interior/marin.webp){.gallery-img loading=\"lazy\" group=\"interior-gallery\"}\n:::\n",
+    "supporting": [
+      "interior_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

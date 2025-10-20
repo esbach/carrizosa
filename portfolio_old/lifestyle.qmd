@@ -1,0 +1,34 @@
+---
+title: "Lifestyle Photography | Brand & Commercial Photographer"
+description: "Lifestyle and brand photography portfolio by Cristina Carrizosa. Commercial photography for Amazon, Tiffany & Co., Adidas and other leading brands."
+format:
+  html:
+    lightbox: true
+    page-layout: full
+---
+
+::: {.client-section}
+::: {.client-header}
+<div class="client-label">Client List</div>
+<div class="client-names">
+Amazon Kindle • Tiffany & Co. • Adidas • Local San Francisco Brands • Lifestyle Magazines • Editorial Features • Brand Campaigns throughout Northern California
+</div>
+:::
+:::
+
+::: {.masonry-grid}
+```{r}
+#| echo: false
+#| results: asis
+
+# Auto-generate masonry grid from folder
+image_files <- list.files("../images/lifestyle", full.names = TRUE, pattern = "\\.(jpg|jpeg|png|webp|gif)$")
+
+for (img in image_files) {
+  # Extract filename without extension for alt text
+  filename <- tools::file_path_sans_ext(basename(img))
+  alt_text <- paste("Lifestyle photography by Cristina Carrizosa -", filename)
+  cat(sprintf('![%s](%s){.gallery-img loading="lazy" group="lifestyle-gallery"}\n\n', alt_text, img))
+}
+```
+:::

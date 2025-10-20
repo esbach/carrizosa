@@ -1,0 +1,15 @@
+{
+  "hash": "35a23d424cd3468b71cc6573e8cdabaf",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Style to Watch\"\nformat:\n  html:\n    lightbox: true\n    page-layout: full\n---\n\n::: {.project-intro}\nStyle to Watch is an exploration of emerging trends, timeless pieces, and the intersection of fashion and lifestyle. This project captures curated looks and styling concepts that inspire and inform, showcasing how personal style evolves and expresses individual narratives.\n:::\n\n::: {.masonry-grid}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

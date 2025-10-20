@@ -1,0 +1,25 @@
+---
+title: "Weddings"
+format:
+  html:
+    lightbox: true
+    page-layout: full
+---
+
+::: {.project-intro}
+Capturing the beauty, emotion, and unforgettable moments of wedding celebrations. From intimate ceremonies to grand receptions, this collection showcases the artistry of love stories told through thoughtful composition, natural light, and attention to the details that make each wedding unique.
+:::
+
+::: {.masonry-grid}
+```{r}
+#| echo: false
+#| results: asis
+
+# Auto-generate masonry grid from folder
+image_files <- list.files("../images/projects/weddings", full.names = TRUE, pattern = "\\.(jpg|jpeg|png|webp|gif)$")
+
+for (img in image_files) {
+  cat(sprintf('![](%s){.gallery-img loading="lazy" group="weddings-gallery"}\n\n', img))
+}
+```
+:::

@@ -1,0 +1,15 @@
+{
+  "hash": "e45a10a372e2899ae358205cdcaa0e88",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Hacienda Quito\"\nformat:\n  html:\n    lightbox: true\n    page-layout: full\n---\n\n::: {.project-intro}\nHacienda Quito is a historic property transformed into a boutique destination that honors its heritage while embracing contemporary comfort. This photography series captures the property's unique character—from colonial architecture and traditional details to lush gardens and curated interiors that blend old and new.\n:::\n\n::: {.masonry-grid}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

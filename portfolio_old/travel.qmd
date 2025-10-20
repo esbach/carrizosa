@@ -1,0 +1,30 @@
+---
+title: "Travel"
+format:
+  html:
+    lightbox: true
+    page-layout: full
+---
+
+::: {.client-section}
+::: {.client-header}
+<div class="client-label">Client List</div>
+<div class="client-names">
+Travel Publications • Destination Marketing • Hotel & Resort Photography • Tourism Boards • Travel Blogs • Adventure Brands • Destination Features in Ecuador, Colombia, and California
+</div>
+:::
+:::
+
+::: {.masonry-grid}
+```{r}
+#| echo: false
+#| results: asis
+
+# Auto-generate masonry grid from folder
+image_files <- list.files("../images/travel", full.names = TRUE, pattern = "\\.(jpg|jpeg|png|webp|gif)$")
+
+for (img in image_files) {
+  cat(sprintf('![](%s){.gallery-img loading="lazy" group="travel-gallery"}\n\n', img))
+}
+```
+:::

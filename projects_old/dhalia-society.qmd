@@ -1,0 +1,25 @@
+---
+title: "Dhalia Society"
+format:
+  html:
+    lightbox: true
+    page-layout: full
+---
+
+::: {.project-intro}
+The Dhalia Society is a modern floral design studio that brings artistic vision and botanical expertise to events and spaces throughout the Bay Area. Our collaboration focused on capturing the essence of their distinctive style—bold, organic arrangements that blur the line between nature and art. Through careful composition and natural lighting, we created a visual narrative that showcases both the intricate details and the overall impact of their work.
+:::
+
+::: {.masonry-grid}
+```{r}
+#| echo: false
+#| results: asis
+
+# Auto-generate masonry grid from folder
+image_files <- list.files("../images/projects/dhalia-society", full.names = TRUE, pattern = "\\.(jpg|jpeg|png|webp|gif)$")
+
+for (img in image_files) {
+  cat(sprintf('![](%s){.gallery-img loading="lazy" group="dhalia-society-gallery"}\n\n', img))
+}
+```
+:::

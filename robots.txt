@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cristinacarrizosa.com/sitemap.xml
+
+# Block unnecessary crawling
+Disallow: /_freeze/
+Disallow: /_site/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /README.md
+Disallow: /GRID-USAGE.md

@@ -1,0 +1,109 @@
+---
+title: "Portfolio | Cristina Carrizosa Photography"
+description: "Explore Cristina Carrizosa's photography portfolio featuring hospitality, lifestyle, and commercial projects for brands like Marriott, Tiffany & Co., and boutique hotels."
+page-layout: full
+---
+
+::: {.projects-grid}
+
+::: {.project-item}
+[![](images/projects/dhalias/dhalia-1.jpg){alt="Dhalia Society photography project by Cristina Carrizosa"}](projects/dhalia-society.qmd)
+
+### Dhalia Society
+:::
+
+::: {.project-item}
+[![](images/projects/scarves/scarves.webp){alt="Scarves photography project by Cristina Carrizosa"}](projects/scarves.qmd)
+
+### Scarves
+:::
+
+::: {.project-item}
+[![](images/projects/thirdlove/thirdlove.webp){alt="ThirdLove photography project by Cristina Carrizosa"}](projects/thirdlove.qmd)
+
+### ThirdLove
+:::
+
+::: {.project-item}
+[![](images/projects/salud/salud.webp){alt="Salud Vitamins photography project by Cristina Carrizosa"}](projects/salud-vitamins.qmd)
+
+### Salud Vitamins
+:::
+
+::: {.project-item}
+[![](images/projects/marin/marin.webp){alt="Marin County homes photography project by Cristina Carrizosa"}](projects/marin-homes.qmd)
+
+### Marin Homes
+:::
+
+::: {.project-item}
+[![](images/projects/agustin/hacienda.webp){alt="Hacienda Quito photography project by Cristina Carrizosa"}](projects/hacienda-quito.qmd)
+
+### Hacienda Quito
+:::
+
+:::
+
+
+<style>
+/* Projects Grid Page */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 0rem auto 0rem auto;
+  max-width: 1200px;
+  padding: 0 var(--spacing-md);
+}
+
+.project-item {
+  text-align: left;
+}
+
+.project-item a {
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.project-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.project-item:hover img {
+  transform: scale(1.05);
+}
+
+.project-item h3 {
+  font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.project-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-item a:hover {
+  text-decoration: none;
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+</style>
+

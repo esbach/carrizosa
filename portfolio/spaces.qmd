@@ -1,0 +1,27 @@
+---
+title: "Hospitality | Cristina Carrizosa Photography"
+description: "Professional hospitality photography services for hotels, restaurants, and luxury accommodations in Richmond, VA and San Francisco Bay Area by Cristina Carrizosa."
+format:
+  html:
+    lightbox: true
+    page-layout: full
+---
+
+::: {.project-intro}
+I create hospitality images that merge design and experience — showcasing the beauty of the space while evoking the sensory, human side of being there.
+:::
+
+
+::: {.masonry-grid}
+```{r}
+#| echo: false
+#| results: asis
+
+# Auto-generate masonry grid from folder
+image_files <- list.files("../images/portfolio/spaces/web", full.names = TRUE, pattern = "\\.(jpg|jpeg|png|webp|gif)$")
+
+for (img in image_files) {
+  cat(sprintf('![](%s){.gallery-img loading="lazy" group="people"}\n\n', img))
+}
+```
+:::

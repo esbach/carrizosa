@@ -1,0 +1,92 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "!GRID-USAGE.md"
+
+execute:
+  freeze: auto
+
+website:
+  title: "CRISTINA CARRIZOSA"
+  description: "Hospitality and lifestyle photographer based in Richmond, VA, San Francisco, and Quito. Specializing in boutique hotels, luxury vacation rentals, and interior design photography."
+  site-url: "https://cristinacarrizosa.com"
+  open-graph: true
+  twitter-card: true
+  google-analytics: "G-XXXXXXXXXX"
+  favicon: "images/favicon.webp"
+  search: false
+  navbar:
+    right:
+      - href: about.qmd
+        text: about
+      - href: portfolio.qmd
+        text: portfolio
+      - href: services.qmd
+        text: services
+      - href: contact.qmd
+        text: contact
+  page-footer:
+    left: |
+      © 2025 Cristina Carrizosa
+    center: |
+      Richmond, VA — San Francisco, CA — Quito, Ecuador
+    right: |
+      [Email](mailto:hi@cristinacarrizosa.com) &nbsp;&nbsp; [Instagram](https://instagram.com/cristinacarrizosa)      
+    background: white
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    anchor-sections: false
+    include-in-header: schema-markup.html
+    include-after-body: 
+      - text: |
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            if (currentPath.includes('/portfolio/')) {
+              const portfolioDropdown = document.querySelector('.navbar-nav .dropdown-toggle');
+              if (portfolioDropdown) {
+                portfolioDropdown.style.textDecoration = 'underline';
+              }
+            }
+            
+            // Auto-load images for masonry/gallery grids
+            document.querySelectorAll('[data-image-folder]').forEach(function(container) {
+              const folder = container.getAttribute('data-image-folder');
+              const extensions = ['jpg', 'jpeg', 'png', 'webp', 'gif'];
+              const imageCount = parseInt(container.getAttribute('data-image-count') || '50');
+              const isMasonry = container.classList.contains('masonry-grid');
+              const itemClass = isMasonry ? 'masonry-item' : 'portfolio-item';
+              
+              // Try to load images with common naming patterns
+              for (let i = 1; i <= imageCount; i++) {
+                extensions.forEach(function(ext) {
+                  const img = new Image();
+                  const imagePath = folder + '/' + folder.split('/').pop() + '-' + i + '.' + ext;
+                  
+                  img.onload = function() {
+                    const item = document.createElement('div');
+                    item.className = itemClass;
+                    const imgElement = document.createElement('img');
+                    imgElement.src = imagePath;
+                    imgElement.alt = '';
+                    item.appendChild(imgElement);
+                    container.appendChild(item);
+                  };
+                  
+                  img.src = imagePath;
+                });
+              }
+            });
+          });
+          </script>
+    toc: false
+    page-layout: full
+    search: false
+
+editor: visual
+

@@ -1,0 +1,356 @@
+---
+title: "Cristina Carrizosa | Hospitality & Lifestyle Photographer"
+description: "Professional hospitality and lifestyle photographer based in Richmond, VA. Specializing in boutique hotels, luxury vacation rentals, and interior design photography in San Francisco and internationally."
+format: html
+execute:
+  echo: false
+---
+
+```{r}
+source("carousel/carousel.R")
+carousel("gallery-carousel", 10000, items = list(
+  list(image = "images/home/home1.jpg"),
+  list(image = "images/home/home2.jpg"),
+  list(image = "images/home/home3.jpg"),
+  list(image = "images/home/home4.jpg")
+))
+```
+
+<!-- Navigation Zones -->
+<div class="carousel-zone carousel-zone-left" onclick="changeSlide(-1)"></div>
+<div class="carousel-zone carousel-zone-right" onclick="changeSlide(1)"></div>
+
+<!-- Arrow that follows cursor -->
+<div class="cursor-arrow" id="cursorArrow">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+  </svg>
+</div>
+
+<script>
+// Simple carousel navigation
+let currentSlide = 0;
+let totalSlides = 0;
+let isTransitioning = false;
+
+function changeSlide(direction) {
+  if (isTransitioning) return; // Prevent rapid clicking
+  
+  const carousel = document.getElementById('gallery-carousel');
+  const slides = carousel.querySelectorAll('.carousel-item');
+  totalSlides = slides.length;
+  
+  if (totalSlides === 0) return;
+  
+  isTransitioning = true;
+  
+  // Remove active class from current slide (fade out)
+  slides[currentSlide].classList.remove('active');
+  
+  // Calculate next slide
+  if (direction === 1) {
+    currentSlide = (currentSlide + 1) % totalSlides;
+  } else {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  }
+  
+  // Add active class to new slide after a brief delay (fade in)
+  setTimeout(() => {
+    slides[currentSlide].classList.add('active');
+  }, 150); // Slightly longer delay for fade-out then fade-in effect
+  
+  // Reset transition lock after animation
+  setTimeout(() => {
+    isTransitioning = false;
+  }, 700); // Total time for both fade-out and fade-in
+}
+
+// Initialize carousel
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.getElementById('gallery-carousel');
+  
+  if (!carousel) {
+    return;
+  }
+  
+  const slides = carousel.querySelectorAll('.carousel-item');
+  totalSlides = slides.length;
+  
+  // Ensure first slide is active and visible
+  if (slides.length > 0) {
+    // Remove any existing active classes
+    slides.forEach(slide => slide.classList.remove('active'));
+    // Add active class to first slide
+    slides[0].classList.add('active');
+  }
+});
+
+// Cursor arrow functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const cursorArrow = document.getElementById('cursorArrow');
+  const leftZone = document.querySelector('.carousel-zone-left');
+  const rightZone = document.querySelector('.carousel-zone-right');
+  
+  let currentZone = null;
+  
+  // Track mouse movement
+  document.addEventListener('mousemove', function(e) {
+    cursorArrow.style.left = e.clientX + 'px';
+    cursorArrow.style.top = e.clientY + 'px';
+    
+    // Check if mouse is within the carousel zones (both X and Y coordinates)
+    const x = e.clientX;
+    const y = e.clientY;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    
+    // Check if mouse is within the vertical bounds of the carousel zones
+    const zoneTop = 120; // Same as CSS top value
+    const zoneBottom = windowHeight - 200; // Same as CSS calculation
+    
+    if (y < zoneTop || y > zoneBottom) {
+      // Mouse is outside the vertical bounds - hide arrow
+      cursorArrow.classList.remove('visible', 'left', 'right');
+      currentZone = null;
+      return;
+    }
+    
+    // Check horizontal position only if within vertical bounds
+    if (x < windowWidth * 0.15) {
+      // Left edge - no arrow
+      cursorArrow.classList.remove('visible', 'left', 'right');
+      currentZone = null;
+    } else if (x >= windowWidth * 0.15 && x < windowWidth * 0.45) {
+      // Left zone
+      if (currentZone !== 'left') {
+        cursorArrow.classList.remove('visible', 'right');
+        cursorArrow.classList.add('visible', 'left');
+        cursorArrow.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/></svg>';
+        currentZone = 'left';
+      }
+    } else if (x >= windowWidth * 0.55 && x < windowWidth * 0.85) {
+      // Right zone
+      if (currentZone !== 'right') {
+        cursorArrow.classList.remove('visible', 'left');
+        cursorArrow.classList.add('visible', 'right');
+        cursorArrow.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/></svg>';
+        currentZone = 'right';
+      }
+    } else {
+      // Right edge - no arrow
+      cursorArrow.classList.remove('visible', 'left', 'right');
+      currentZone = null;
+    }
+  });
+  
+  // Hide arrow when mouse leaves window
+  document.addEventListener('mouseleave', function() {
+    cursorArrow.classList.remove('visible', 'left', 'right');
+    currentZone = null;
+  });
+});
+</script>
+<style>
+
+/* hide title block but get browser tab title*/
+.quarto-title-block {
+  display: none !important;
+}
+
+/* Remove Quarto’s layout padding */
+main#quarto-document-content,
+.page-columns,
+.content,
+.column-page {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove body scroll gaps */
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* New wrapper to force full height */
+.fullscreen-carousel {
+  height: 100dvh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Carousel container */
+#gallery-carousel {
+  height: 70vh; /* Fixed height to leave space for footer */
+  width: 100vw;
+  position: relative;
+  display: block;
+  margin: 30px auto 0 auto; /* Reduced top margin to bring images closer to header */
+}
+
+/* Carousel inner container */
+#gallery-carousel .carousel-inner {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* Carousel item */
+#gallery-carousel .carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0;
+  z-index: 0;
+}
+
+#gallery-carousel .carousel-item.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Image styling */
+#gallery-carousel img {
+  max-height: 60vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+#quarto-content {
+  display: flex;
+  flex-direction: column;
+}
+
+main#quarto-document-content {
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 70vh; /* Allow content to flow naturally */
+}
+
+/* Navigation zones - invisible hover areas */
+.carousel-zone {
+  position: fixed;
+  top: 120px; /* Below header */
+  height: calc(100vh - 200px); /* Leave space for header and footer */
+  max-height: calc(100vh - 200px); /* Prevent extending into footer */
+  z-index: 100;
+  cursor: none; /* Hide default cursor */
+  transition: background-color 0.2s ease;
+  pointer-events: auto; /* Ensure click events work */
+}
+
+.carousel-zone-left {
+  left: 15%;
+  width: 30%;
+}
+
+.carousel-zone-right {
+  right: 15%;
+  width: 30%;
+}
+
+/* Cursor arrow that follows mouse */
+.cursor-arrow {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-arrow.visible {
+  opacity: 1;
+}
+
+.cursor-arrow svg {
+  width: 40px;
+  height: 40px;
+  fill: rgba(0, 0, 0, 0.8);
+}
+
+/* Zone styling - completely transparent */
+.carousel-zone {
+  background: transparent;
+  border: none;
+}
+
+.carousel-zone-left {
+  background: transparent;
+  border: none;
+}
+
+.carousel-zone-right {
+  background: transparent;
+  border: none;
+}
+
+/* Zone hover effects - no visual changes */
+.carousel-zone:hover {
+  background: transparent;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  #gallery-carousel img {
+    max-width: 70vw;
+    max-height: 70vh;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .cursor-arrow svg {
+    width: 32px;
+    height: 32px;
+  }
+  
+  /* Adjust navigation zones for mobile */
+  .carousel-zone {
+    top: 100px;
+    height: calc(100vh - 250px);
+  }
+}
+
+@media (max-width: 480px) {
+  #gallery-carousel img {
+    max-width: 75vw;
+    max-height: 75vh;
+  }
+  
+  .cursor-arrow svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  /* Smaller navigation zones for small mobile */
+  .carousel-zone {
+    top: 80px;
+    height: calc(100vh - 200px);
+  }
+}
+
+</style>

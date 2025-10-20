@@ -1,0 +1,26 @@
+---
+title: "Botanical | Cristina Carrizosa Photography"
+description: "Lifestyle and brand photography portfolio by Cristina Carrizosa. Commercial photography for Amazon, Tiffany & Co., Adidas and other leading brands."
+format:
+  html:
+    lightbox: true
+    page-layout: full
+---
+
+::: {.project-intro}
+Through flowers and botanical forms, I explore light, texture, and the quiet beauty of transience. My current work with the Dahlia Society of California celebrates San Francisco’s official flower and its century-long legacy of color, design, and devotion.
+:::
+
+::: {.masonry-grid}
+```{r}
+#| echo: false
+#| results: asis
+
+# Auto-generate masonry grid from folder
+image_files <- list.files("../images/portfolio/botanical/web", full.names = TRUE, pattern = "\\.(jpg|jpeg|png|webp|gif)$")
+
+for (img in image_files) {
+  cat(sprintf('![](%s){.gallery-img loading="lazy" group="botanical"}\n\n', img))
+}
+```
+:::

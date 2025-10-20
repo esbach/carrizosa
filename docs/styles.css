@@ -1,0 +1,1140 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+/* ============================================
+   Global Styles
+   ============================================ */
+
+:root {
+  --primary-color: #0612AF;
+  --secondary-color: #0612AF;
+  --accent-color: #0612AF;
+  --text-color: #0612AF;
+  --light-gray: #FFFFFF;
+  --medium-gray: #F8F9FA;
+  --dark-gray: #0612AF;
+  --cream-bg: #FFFFFF;
+  --gold-accent: #0612AF;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+  --content-padding: 2rem;
+  --navbar-padding: 1.75rem;
+  --right-padding: 1.75rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default margins on main content */
+#quarto-content {
+  padding-top: 2rem;
+}
+
+/* Hide title block */
+.quarto-title-block {
+  display: none !important;
+}
+
+/* Hide anchor link icons on headings - comprehensive */
+.header-section-number,
+a.anchor-section,
+.anchorjs-link,
+.anchor,
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Hide all anchor icons */
+.heading-anchor,
+a[class*="anchor"] {
+  display: none !important;
+}
+
+/* Prevent anchor links from showing on hover */
+h1:hover > a,
+h2:hover > a,
+h3:hover > a,
+h4:hover > a,
+h5:hover > a,
+h6:hover > a {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* ============================================
+   Navigation
+   ============================================ */
+
+/* Minimal navbar styling */
+.navbar {
+  background-color: white !important;
+}
+
+/* Force hamburger to the right on mobile */
+@media (max-width: 991px) {
+  .navbar > .container-fluid {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  
+  .navbar-brand {
+    order: 1 !important;
+    margin-right: 0 !important;
+  }
+  
+  .navbar-toggler {
+    order: 2 !important;
+    margin-left: auto !important;
+    margin-right: 3rem !important;
+  }
+  
+  .navbar-collapse {
+    order: 3 !important;
+    width: 100% !important;
+  }
+}
+
+/* Hide Bootstrap's default hamburger icon */
+.navbar-toggler .navbar-toggler-icon { 
+  display: none; 
+}
+
+/* Custom hamburger with animated lines */
+.navbar-toggler {
+  position: relative;
+  width: 30px;
+  height: 22px;
+  color: #0612AF;                /* Purple color */
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Two hamburger bars using pseudo-elements */
+.navbar-toggler::before,
+.navbar-toggler::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background-color: currentColor;  /* Uses the purple color set above */
+  transform-origin: center;
+  transition: transform 200ms ease, top 200ms ease, opacity 150ms ease;
+}
+
+/* Closed state - two horizontal lines */
+.navbar-toggler::before { 
+  top: 6px;  
+  transform: translateX(-50%) rotate(0); 
+}
+
+.navbar-toggler::after { 
+  top: 14px; 
+  transform: translateX(-50%) rotate(0); 
+}
+
+/* Open state - transform into X */
+.navbar-toggler[aria-expanded="true"]::before,
+.navbar-toggler[aria-expanded="true"]::after {
+  width: 20px;   /* Slightly smaller X */
+  height: 2px;
+}
+
+.navbar-toggler[aria-expanded="true"]::before {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"]::after {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.navbar-brand {
+  font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: var(--navbar-padding) !important;
+  margin-left: 0 !important;
+}
+
+/* All nav links - consistent styling */
+.navbar-nav .nav-link,
+.navbar-nav .dropdown-toggle {
+  color: var(--primary-color);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: var(--right-padding) !important;
+  margin-right: 0 !important;
+  border: none;
+  background: none;
+}
+
+/* Ensure the last nav item has proper right padding */
+.navbar-nav .nav-link:last-child {
+  padding-right: var(--right-padding) !important;
+}
+
+/* Hover state - lighter shade */
+.navbar-nav .nav-link:hover,
+.navbar-nav .dropdown-toggle:hover {
+  color: var(--primary-color) !important;
+  opacity: 0.7;
+}
+
+/* Active state - underline */
+.navbar-nav .nav-link.active {
+  text-decoration: underline !important;
+}
+
+/* Portfolio dropdown underline when on portfolio pages - handled by JavaScript */
+
+/* Remove dropdown triangles */
+.navbar-nav .dropdown-toggle::after {
+  display: none;
+}
+
+/* Disable click functionality on Portfolio dropdown */
+.navbar-nav .dropdown-toggle {
+  pointer-events: none;
+}
+
+.navbar-nav .dropdown {
+  pointer-events: auto;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  margin-top: 0;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 120px;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  color: var(--primary-color);
+  display: block;
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+}
+
+.dropdown-item:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  opacity: 0.7;
+}
+
+/* Show dropdown on hover with extended hover area */
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Fix dropdown positioning when clicked */
+.navbar-nav .dropdown.show .dropdown-menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: none;
+}
+
+/* Extend hover area upward */
+.navbar-nav .dropdown::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: transparent;
+}
+
+/* ============================================
+   Hero Section (Home Page)
+   ============================================ */
+
+.hero-section {
+  text-align: center;
+  padding: var(--spacing-lg) var(--spacing-md);
+  background-color: white;
+  margin-bottom: var(--spacing-md);
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+  font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  color: var(--primary-color);
+  line-height: 1.1;
+}
+
+.hero-section h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--primary-color);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+/* ============================================
+   Photo Grid (Home Page)
+   ============================================ */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 var(--spacing-md);
+}
+
+.photo-item {
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  aspect-ratio: 4/3;
+}
+
+.photo-item:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.photo-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   About Preview (Home Page)
+   ============================================ */
+
+.about-preview {
+  max-width: 800px;
+  margin: var(--spacing-xl) auto;
+  padding: var(--spacing-lg) var(--spacing-md);
+  text-align: center;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+}
+
+.about-preview h2 {
+  margin-top: 0;
+}
+
+.about-preview p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--dark-gray);
+}
+
+/* ============================================
+   Featured Work (Home Page)
+   ============================================ */
+
+.featured-work {
+  text-align: center;
+  padding: var(--spacing-lg) var(--spacing-md);
+  margin: var(--spacing-xl) auto;
+  max-width: 800px;
+}
+
+.featured-work h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  margin: 1rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   Portfolio Grid
+   ============================================ */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin: var(--spacing-md) auto;
+  max-width: 1600px;
+  padding: 0 var(--spacing-md) var(--spacing-lg);
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  aspect-ratio: 4 / 3;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   Masonry Grid (Dynamic Heights)
+   ============================================ */
+
+.masonry-grid {
+  column-count: 3;
+  column-gap: 2rem;
+  margin: 5rem auto 0 auto;
+  max-width: 1600px;
+  padding: 0 var(--content-padding) var(--spacing-lg);
+}
+
+/* Reset paragraph and link margins in masonry grid */
+.masonry-grid p {
+  margin: 0 !important;
+}
+
+.masonry-grid a {
+  display: block;
+  margin: 0 !important;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  page-break-inside: avoid;
+}
+
+.masonry-item:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+.masonry-item img,
+.gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.masonry-item:hover img,
+.gallery-img:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Enhanced masonry with better spacing */
+.masonry-grid .gallery-img:nth-child(3n+1) {
+  /* Every 3rd image starting from 1st - slightly more space */
+  margin-bottom: 2.2rem;
+}
+
+.masonry-grid .gallery-img:nth-child(5n) {
+  /* Every 5th image - special emphasis */
+  margin-bottom: 2.5rem;
+}
+
+/* Responsive masonry */
+@media (max-width: 1200px) {
+  .masonry-grid {
+    column-count: 2;
+    column-gap: 1.5rem;
+  }
+  
+  .masonry-item img,
+  .gallery-img {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .masonry-grid {
+    column-count: 1;
+    column-gap: 0;
+  }
+  
+  .masonry-item img,
+  .gallery-img {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ============================================
+   Client Section (Interior Portfolio)
+   ============================================ */
+
+.client-section {
+  max-width: 1600px;
+  margin: 0 auto 2rem auto;
+  padding: 1rem var(--content-padding);
+  background-color: var(--light-gray);
+}
+
+.client-header {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
+.client-label {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  padding-top: 0.25rem;
+}
+
+.client-names {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--dark-gray);
+}
+
+/* Responsive client section */
+@media (max-width: 768px) {
+  .client-header {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .client-label {
+    border-bottom: 1px solid var(--medium-gray);
+    padding-bottom: 0.5rem;
+  }
+}
+
+/* ============================================
+   Projects Grid Page
+   ============================================ */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 var(--spacing-md);
+}
+
+.project-item {
+  text-align: left;
+}
+
+.project-item a {
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.project-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.project-item:hover img {
+  transform: scale(1.05);
+}
+
+.project-item h3 {
+  font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.project-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-item a:hover {
+  text-decoration: none;
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ============================================
+   Project Pages
+   ============================================ */
+
+.project-intro {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  padding: 0 var(--content-padding);
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--dark-gray);
+}
+
+.project-grid-4col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md) var(--spacing-lg);
+  max-width: 100%;
+}
+
+/* Responsive project grid */
+@media (max-width: 1200px) {
+  .project-grid-4col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-grid-4col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-grid-4col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   About Page
+   ============================================ */
+
+/* About page layout */
+.about-page-layout {
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-image {
+  flex: 0 0 40%;
+  position: sticky;
+  top: 18vh;
+  align-self: start;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.about-content {
+  flex: 0 0 40%;
+}
+
+/* ============================================
+   Services Page
+   ============================================ */
+
+/* Services page layout - same as about page */
+.service-page-layout {
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.service-image {
+  flex: 0 0 40%;
+  position: sticky;
+  top: 18vh;
+  align-self: start;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.service-content {
+  flex: 0 0 40%;
+}
+
+/* Mobile responsive - single column layout */
+@media (max-width: 768px) {
+  .about-page-layout {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .about-image {
+    flex: none;
+    position: static;
+  }
+  
+  .about-content {
+    flex: none;
+  }
+  
+  /* Crop image to square on mobile */
+  .about-image img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  /* Services page mobile responsive */
+  .service-page-layout {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .service-image {
+    flex: none;
+    position: static;
+  }
+  
+  .service-content {
+    flex: none;
+  }
+  
+  .service-image img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* ============================================
+   Contact Page
+   ============================================ */
+
+.contact-cta {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--secondary-color);
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--medium-gray);
+}
+
+/* ============================================
+   Article Layout (About, Contact)
+   ============================================ */
+
+.page-layout-article {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.1rem;
+  }
+  
+  h1 {
+    font-size: 2.25rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  .photo-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .about-preview,
+  .featured-work,
+  .project-intro {
+    padding: var(--spacing-md);
+  }
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+
+.text-center {
+  text-align: center;
+}
+
+.mt-lg {
+  margin-top: var(--spacing-lg);
+}
+
+.mb-lg {
+  margin-bottom: var(--spacing-lg);
+}
+
+.pt-lg {
+  padding-top: var(--spacing-lg);
+}
+
+.pb-lg {
+  padding-bottom: var(--spacing-lg);
+}
+
+/* ============================================
+   Image Loading States
+   ============================================ */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[src$=".jpg"],
+img[src$=".jpeg"],
+img[src$=".png"],
+img[src$=".gif"] {
+  background: var(--light-gray);
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+/* ============================================
+   Footer
+   ============================================ */
+
+/* Target Quarto's footer classes */
+.page-footer,
+footer.page-footer,
+.quarto-page-footer {
+  background-color: white !important;
+  border-top: 1px solid #e0e0e0;
+  padding-left: 1.75rem !important;
+  padding-right: 1.75rem !important;
+  color: var(--primary-color) !important;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif !important;
+}
+
+/* All footer text purple */
+.page-footer *,
+footer.page-footer *,
+.quarto-page-footer * {
+  color: var(--primary-color) !important;
+  font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif !important;
+}
+
+/* Footer links */
+.page-footer a,
+footer.page-footer a,
+.quarto-page-footer a {
+  color: var(--primary-color) !important;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.page-footer a:hover,
+footer.page-footer a:hover,
+.quarto-page-footer a:hover {
+  opacity: 0.7;
+}
+
+/* Clean footer column styling */
+
+/* Target the actual footer container for padding */
+.footer {
+  padding-left: 3.5rem !important;
+  padding-right: 3.5rem !important;
+}
+
+/* Add horizontal padding to footer content */
+.nav-footer {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+/* Footer column widths handled below */
+
+
+/* FORCE IDENTICAL FOOTER SPACING */
+.nav-footer-left,
+.nav-footer-right {
+  font-size: 1rem !important;
+  color: #6c757d !important;
+  padding-bottom: 1rem !important;
+}
+
+/* Make both first lines identical */
+.nav-footer-left::first-line,
+.nav-footer-right::first-line {
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  color: #0612AF !important;
+}
+
+/* Links styling */
+.nav-footer-right a {
+  color: inherit !important;
+  text-decoration: none !important;
+  margin-right: 1rem !important;
+}
+
+.nav-footer-right a:last-child {
+  margin-right: 0 !important;
+}
+
+.nav-footer-right a:hover {
+  opacity: 0.7 !important;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  .navbar-brand {
+    font-size: 1.6rem !important;
+    margin-left: 0rem !important;
+  }
+  
+  .navbar-toggler {
+    margin-right: 3rem !important;
+    margin-left: auto !important;
+  }
+  
+  
+  /* Footer mobile layout */
+  .nav-footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 !important;
+  }
+  
+  .nav-footer-right { order: 1 !important; }
+  .nav-footer-center { order: 2 !important; }
+  .nav-footer-left { order: 3 !important; }
+  
+  /* Remove all spacing from footer elements */
+  .nav-footer-left,
+  .nav-footer-center,
+  .nav-footer-right {
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: auto !important;
+  }
+  
+  /* Add bottom padding to copyright element */
+  .nav-footer-left {
+    padding-bottom: 1rem !important;
+  }
+}
+
+@media print {
+  .navbar,
+  .btn {
+    display: none;
+  }
+  
+  body {
+    color: black;
+    background: white;
+  }
+}
