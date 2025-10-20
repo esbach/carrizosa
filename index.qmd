@@ -12,7 +12,11 @@ carousel("gallery-carousel", 10000, items = list(
   list(image = "images/home/home1.jpg"),
   list(image = "images/home/home2.jpg"),
   list(image = "images/home/home3.jpg"),
-  list(image = "images/home/home4.jpg")
+  list(image = "images/home/home4.jpg"),
+  list(image = "images/home/home5.jpg"),
+  list(image = "images/home/home6.jpg"),
+  list(image = "images/home/home7.jpg"),
+  list(image = "images/home/home8.jpg")
 ))
 ```
 
