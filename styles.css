@@ -1139,7 +1139,7 @@ footer.page-footer a:hover,
 @media (max-width: 768px) {
   /* Header adjustments */
   .navbar-brand {
-    font-size: 1.6rem !important;
+    font-size: 1.4rem !important;
     margin-left: 0rem !important;
   }
   
