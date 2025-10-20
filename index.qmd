@@ -8,7 +8,7 @@ execute:
 
 ```{r}
 source("carousel/carousel.R")
-carousel("gallery-carousel", 10000, items = list(
+carousel("gallery-carousel", 5000, items = list(
   list(image = "images/home/home1.jpg"),
   list(image = "images/home/home2.jpg"),
   list(image = "images/home/home3.jpg"),
@@ -36,6 +36,30 @@ carousel("gallery-carousel", 10000, items = list(
 let currentSlide = 0;
 let totalSlides = 0;
 let isTransitioning = false;
+let carouselTimer = null;
+const CAROUSEL_INTERVAL = 5000; // 5 seconds as defined in the carousel call
+
+// Timer management functions
+function startCarouselTimer() {
+  stopCarouselTimer(); // Clear any existing timer
+  carouselTimer = setInterval(() => {
+    if (!isTransitioning) {
+      changeSlide(1); // Auto-advance to next slide
+    }
+  }, CAROUSEL_INTERVAL);
+}
+
+function stopCarouselTimer() {
+  if (carouselTimer) {
+    clearInterval(carouselTimer);
+    carouselTimer = null;
+  }
+}
+
+function resetCarouselTimer() {
+  stopCarouselTimer();
+  startCarouselTimer();
+}
 
 function changeSlide(direction) {
   if (isTransitioning) return; // Prevent rapid clicking
@@ -47,6 +71,16 @@ function changeSlide(direction) {
   if (totalSlides === 0) return;
   
   isTransitioning = true;
+  
+  // Reset the carousel timer by stopping and restarting automatic cycling
+  if (window.bootstrap && window.bootstrap.Carousel) {
+    const bsCarousel = window.bootstrap.Carousel.getOrCreateInstance(carousel);
+    bsCarousel.pause(); // Stop current timer
+    bsCarousel.cycle(); // Restart timer from beginning
+  }
+  
+  // Also reset our custom timer as a fallback
+  resetCarouselTimer();
   
   // Remove active class from current slide (fade out)
   slides[currentSlide].classList.remove('active');
@@ -87,6 +121,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add active class to first slide
     slides[0].classList.add('active');
   }
+  
+  // Start our custom timer as a fallback
+  startCarouselTimer();
 });
 
 // Cursor arrow functionality

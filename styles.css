@@ -983,6 +983,64 @@ img[src$=".gif"] {
 }
 
 /* ============================================
+   Lightbox Customization
+   ============================================ */
+
+/* Override GLightbox overlay background to white blur */
+.goverlay {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+/* Ensure lightbox content is visible on white background */
+.glightbox-container .gslide-description .gslide-title,
+.glightbox-container .gslide-description .gslide-desc {
+  color: var(--primary-color) !important;
+}
+
+/* Style navigation buttons for white background - flat, no shadows */
+.gclose,
+.gnext,
+.gprev {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.gclose:hover,
+.gnext:hover,
+.gprev:hover {
+  background: none !important;
+  opacity: 0.7 !important;
+}
+
+.gclose svg path,
+.gnext svg path,
+.gprev svg path {
+  fill: var(--primary-color) !important;
+  stroke: var(--primary-color) !important;
+}
+
+/* Remove any shadows from lightbox images */
+.gslide-image img,
+.gslide-media,
+.glightbox-container .gslide-media {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+/* Add padding to lightbox images - top and bottom spacing */
+.glightbox-container .ginner-container {
+  padding: 60px 0 !important;
+}
+
+.gslide-image img {
+  max-height: calc(100vh - 120px) !important;
+}
+
+/* ============================================
    Print Styles
    ============================================ */
 

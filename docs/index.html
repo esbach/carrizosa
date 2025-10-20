@@ -370,28 +370,28 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <div class="cell-output-display">
 <div id="gallery-carousel" class="carousel carousel-dark carousel-fade" data-bs-ride="carousel">
 <div class="carousel-inner">
-<div class="carousel-item active" data-bs-interval="10000">
+<div class="carousel-item active" data-bs-interval="5000">
 <img src="images/home/home1.jpg" class="d-block mx-auto">
 </div>
-<div class="carousel-item" data-bs-interval="10000">
+<div class="carousel-item" data-bs-interval="5000">
 <img src="images/home/home2.jpg" class="d-block mx-auto">
 </div>
-<div class="carousel-item" data-bs-interval="10000">
+<div class="carousel-item" data-bs-interval="5000">
 <img src="images/home/home3.jpg" class="d-block mx-auto">
 </div>
-<div class="carousel-item" data-bs-interval="10000">
+<div class="carousel-item" data-bs-interval="5000">
 <img src="images/home/home4.jpg" class="d-block mx-auto">
 </div>
-<div class="carousel-item" data-bs-interval="10000">
+<div class="carousel-item" data-bs-interval="5000">
 <img src="images/home/home5.jpg" class="d-block mx-auto">
 </div>
-<div class="carousel-item" data-bs-interval="10000">
+<div class="carousel-item" data-bs-interval="5000">
 <img src="images/home/home6.jpg" class="d-block mx-auto">
 </div>
-<div class="carousel-item" data-bs-interval="10000">
+<div class="carousel-item" data-bs-interval="5000">
 <img src="images/home/home7.jpg" class="d-block mx-auto">
 </div>
-<div class="carousel-item" data-bs-interval="10000">
+<div class="carousel-item" data-bs-interval="5000">
 <img src="images/home/home8.jpg" class="d-block mx-auto">
 </div>
 </div>
@@ -414,6 +414,30 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 let currentSlide = 0;
 let totalSlides = 0;
 let isTransitioning = false;
+let carouselTimer = null;
+const CAROUSEL_INTERVAL = 5000; // 5 seconds as defined in the carousel call
+
+// Timer management functions
+function startCarouselTimer() {
+  stopCarouselTimer(); // Clear any existing timer
+  carouselTimer = setInterval(() => {
+    if (!isTransitioning) {
+      changeSlide(1); // Auto-advance to next slide
+    }
+  }, CAROUSEL_INTERVAL);
+}
+
+function stopCarouselTimer() {
+  if (carouselTimer) {
+    clearInterval(carouselTimer);
+    carouselTimer = null;
+  }
+}
+
+function resetCarouselTimer() {
+  stopCarouselTimer();
+  startCarouselTimer();
+}
 
 function changeSlide(direction) {
   if (isTransitioning) return; // Prevent rapid clicking
@@ -425,6 +449,16 @@ function changeSlide(direction) {
   if (totalSlides === 0) return;
   
   isTransitioning = true;
+  
+  // Reset the carousel timer by stopping and restarting automatic cycling
+  if (window.bootstrap && window.bootstrap.Carousel) {
+    const bsCarousel = window.bootstrap.Carousel.getOrCreateInstance(carousel);
+    bsCarousel.pause(); // Stop current timer
+    bsCarousel.cycle(); // Restart timer from beginning
+  }
+  
+  // Also reset our custom timer as a fallback
+  resetCarouselTimer();
   
   // Remove active class from current slide (fade out)
   slides[currentSlide].classList.remove('active');
@@ -465,6 +499,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add active class to first slide
     slides[0].classList.add('active');
   }
+  
+  // Start our custom timer as a fallback
+  startCarouselTimer();
 });
 
 // Cursor arrow functionality
