@@ -1165,6 +1165,35 @@ footer.page-footer a:hover,
     width: 100% !important;
   }
   
+  /* Align mobile navigation items with navbar-brand */
+  .navbar-nav {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    padding-left: 1.75rem !important; /* Match navbar-brand padding */
+  }
+  
+  .navbar-nav .nav-link {
+    text-align: left !important;
+    padding-left: 0 !important;
+    padding-right: 1rem !important;
+    margin: 0.25rem 0 !important;
+  }
+  
+  /* Align dropdown menu with navigation items */
+  .navbar-nav .dropdown-menu {
+    text-align: left !important;
+    left: 0 !important;
+    transform: none !important;
+    position: absolute !important;
+  }
+  
+  .navbar-nav .dropdown-item {
+    text-align: left !important;
+    padding: 0.5rem 1rem !important;
+  }
+  
   
   /* Footer mobile layout */
   .nav-footer {
