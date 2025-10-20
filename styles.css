@@ -152,7 +152,7 @@ a:hover {
   .navbar-toggler {
     order: 2 !important;
     margin-left: auto !important;
-    margin-right: 3rem !important;
+    margin-right: 1.75rem !important;
   }
   
   .navbar-collapse {
@@ -1137,15 +1137,32 @@ footer.page-footer a:hover,
 
 /* Mobile responsive styles */
 @media (max-width: 768px) {
-  /* Header adjustments */
+  /* Header adjustments - aggressive override like 991px */
+  .navbar > .container-fluid {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding-left: 0 !important;  /* Remove Bootstrap's default left padding */
+    padding-right: 0 !important; /* Remove Bootstrap's default right padding */
+  }
+  
   .navbar-brand {
-    font-size: 1.4rem !important;
+    order: 1 !important;
+    margin-right: 0 !important;
     margin-left: 0rem !important;
+    font-size: 1.4rem !important;
+    padding-left: 1.75rem !important; /* Explicit left padding */
   }
   
   .navbar-toggler {
-    margin-right: 3rem !important;
+    order: 2 !important;
     margin-left: auto !important;
+    margin-right: 1.75rem !important;
+  }
+  
+  .navbar-collapse {
+    order: 3 !important;
+    width: 100% !important;
   }
   
   
