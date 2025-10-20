@@ -4,29 +4,27 @@ description: "Explore Cristina Carrizosa's photography portfolio featuring hospi
 page-layout: full
 ---
 
-::: {.projects-grid}
-
-::: {.project-item}
-[![](images/portfolio/spaces/hospitality.webp){alt="Spaces photography project by Cristina Carrizosa"}](portfolio/spaces.qmd)
+:::::: projects-grid
+::: project-item
+[![](images/portfolio/spaces/web/spaces04.jpg){alt="Spaces photography project by Cristina Carrizosa"}](portfolio/spaces.qmd)
 
 ### Spaces
 :::
 
-::: {.project-item}
+::: project-item
 [![](images/portfolio/people/web/people07.jpg){alt="People photography project by Cristina Carrizosa"}](portfolio/people.qmd)
 
 ### People
 :::
 
-::: {.project-item}
+::: project-item
 [![](images/portfolio/botanical/web/botanical08.jpg){alt="Botanical photography project by Cristina Carrizosa"}](portfolio/botanical.qmd)
 
 ### Botanical
 :::
+::::::
 
-:::
-
-
+```{=html}
 <style>
 /* Portfolio Grid - Clean Setup */
 .projects-grid {
@@ -87,4 +85,4 @@ page-layout: full
   }
 }
 </style>
-
+```

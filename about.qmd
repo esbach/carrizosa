@@ -3,13 +3,12 @@ title: "About | Cristina Carrizosa Photography"
 description: "Learn about Cristina Carrizosa, a commercial photographer specializing in hospitality, lifestyle, and interior photography. Based in Richmond, VA with over 15 years of experience."
 ---
 
-<div class="about-page-layout">
+::::: about-page-layout
+::: about-image
+![](images/about/about.webp){alt="Cristina Carrizosa, hospitality and lifestyle photographer based in Richmond, VA"}
+:::
 
-<div class="about-image">
-![](images/about.webp){alt="Cristina Carrizosa, hospitality and lifestyle photographer based in Richmond, VA"}
-</div>
-
-<div class="about-content">
+::: about-content
 ## About Cristina
 
 Born in Colombia and raised in Ecuador, San Francisco–based photographer Cristina Carrizosa blends her deep-rooted passion for storytelling with more than fifteen years of experience behind the lens. Her photography reveals the feeling of a space—its rhythm, light, and design—through imagery that is both authentic and artfully composed. She collaborates with brands, designers, and hospitality teams to create visual stories that invite and inspire.
@@ -21,8 +20,5 @@ Photography, for Cristina, remains a constant adventure—each click of the shut
 When she's not photographing interiors or the play of light across a room, you might find her at the park with her dog, Obi, visiting art museums, or in pursuit of the perfect slice of pizza.
 
 [Get in Touch](contact.qmd){.btn .btn-primary}
-
-</div>
-
-</div>
-
+:::
+:::::

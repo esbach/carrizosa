@@ -7,32 +7,24 @@ page-layout: article
 ## Get In Touch
 
 I’d love to hear about your project and explore how we can collaborate. My work spans hospitality interiors and lifestyle imagery to fine art floral projects. Whether you’re a designer, brand, or creative collaborator, I bring an eye for detail and atmosphere to every assignment.
----
 
 ### Reach Out
 
-**Email:** [hi@cristinacarrizosa.com](mailto:hi@cristinacarrizosa.com)
+**Email:** [hi\@cristinacarrizosa.com](mailto:hi@cristinacarrizosa.com)
 
 **Phone:** Available upon request
 
 **Location:** San Francisco Bay Area, California
 
----
+------------------------------------------------------------------------
 
 ### Let's Connect
 
 For project inquiries, please include:
 
-- Brief description of your project
-- Timeline and deliverables
-- Any specific creative direction or inspiration
-- Budget range (if applicable)
+-   Brief description of your project
+-   Timeline and deliverables
+-   Any specific creative direction or inspiration
+-   Budget range (if applicable)
 
 I typically respond to all inquiries within 24-48 hours.
-
----
-
-::: {.contact-cta}
-Looking forward to creating something beautiful together.
-:::
-
