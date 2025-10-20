@@ -1173,9 +1173,14 @@ footer.page-footer a:hover,
   
   /* Add specific font size for center footer on mobile */
   .nav-footer-center {
-    font-size: 0.9rem !important;
     padding: 0 !important;
     margin: 0 !important;
+  }
+  
+  .nav-footer-center p {
+    font-size: 1rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
   /* Add bottom padding to copyright element */
