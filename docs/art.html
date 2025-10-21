@@ -287,13 +287,13 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Portfolio | Cristina Carrizosa Photography – CRISTINA CARRIZOSA">
 <meta property="og:description" content="Explore Cristina Carrizosa’s photography portfolio featuring hospitality, lifestyle, and commercial projects.">
-<meta property="og:image" content="https://cristinacarrizosa.com/images/portfolio/spaces/web/spaces07.jpg">
+<meta property="og:image" content="https://cristinacarrizosa.com/images/art/art01.jpg">
 <meta property="og:site_name" content="CRISTINA CARRIZOSA">
-<meta property="og:image:alt" content="Spaces photography project by Cristina Carrizosa">
+<meta property="og:image:alt" content="Blue Painting by Cristina Carrizosa">
 <meta name="twitter:title" content="Portfolio | Cristina Carrizosa Photography – CRISTINA CARRIZOSA">
 <meta name="twitter:description" content="Explore Cristina Carrizosa’s photography portfolio featuring hospitality, lifestyle, and commercial projects.">
-<meta name="twitter:image" content="https://cristinacarrizosa.com/images/portfolio/spaces/web/spaces07.jpg">
-<meta name="twitter:image:alt" content="Spaces photography project by Cristina Carrizosa">
+<meta name="twitter:image" content="https://cristinacarrizosa.com/images/art/art01.jpg">
+<meta name="twitter:image:alt" content="Blue Painting by Cristina Carrizosa">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -333,7 +333,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="https://www.saatchiart.com/cristinacarrizosa?srsltid=AfmBOor7QF34xCyRj8s8SYTDANgva0d2FLMul333iss_B_u2kizqEZLg" target="_blank"> 
+    <a class="nav-link active" href="./art.html" aria-current="page"> 
 <span class="menu-text">art</span></a>
   </li>  
   <li class="nav-item">
@@ -383,21 +383,45 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 </header>
 
 
+<section id="art" class="level1 text-center art-description">
+<h1>Art</h1>
+<p>My work is primarily focused on minimalist and abstract art, using a mix of acrylics and mixed media to explore the emotional impact of color, form, and space. Drawing inspiration from the stillness of nature and personal reflection, I create pieces that encourage introspection and connection. Each work balances simple shapes, a restrained color palette, and subtle textures to evoke a sense of calm, contemplation, and depth.</p>
+<p>View and purchase original paintings and artwork at <a href="https://www.saatchiart.com/cristinacarrizosa?srsltid=AfmBOor7QF34xCyRj8s8SYTDANgva0d2FLMul333iss_B_u2kizqEZLg" target="_blank">Saatchi Art</a></p>
+</section>
 <div class="projects-grid">
 <div class="project-item">
-<p><a href="./portfolio/spaces.html"><img src="images/portfolio/spaces/web/spaces07.jpg" class="img-fluid" alt="Spaces photography project by Cristina Carrizosa"></a></p>
-<section id="spaces" class="level3">
-<h3 data-anchor-id="spaces">spaces</h3>
-</section>
+<p><a href=""><img src="images/art/art01.jpg" class="img-fluid" alt="Blue Painting by Cristina Carrizosa"></a></p>
 </div>
 <div class="project-item">
-<p><a href="./portfolio/people.html"><img src="images/portfolio/people/web/people04.jpg" class="img-fluid" alt="People photography project by Cristina Carrizosa"></a></p>
-<section id="people" class="level3">
-<h3 data-anchor-id="people">people</h3>
-</section>
+<p><a href=""><img src="images/art/art02.jpg" class="img-fluid" alt="Conversations in Pastel Painting by Cristina Carrizosa"></a></p>
+</div>
+<div class="project-item">
+<p><a href=""><img src="images/art/art03.jpg" class="img-fluid" alt="Blue Watercolor by Cristina Carrizosa"></a></p>
 </div>
 </div>
 <style>
+/* Art Description - Match Grid Width */
+.art-description {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0rem;
+}
+
+.art-description p {
+  line-height: 1.3 !important;
+}
+
+.art-description a {
+  text-decoration: underline;
+  color: var(--primary-color, #333);
+  font-weight: 500;
+}
+
+.art-description a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
 /* Portfolio Grid - Clean Setup */
 .projects-grid {
   display: flex;
@@ -407,6 +431,8 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   min-height: 60vh;
   padding: 2rem;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .project-item {
@@ -428,12 +454,14 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   aspect-ratio: 3/4 !important;
   object-fit: cover;
   border-radius: 0px !important;
-  transition: transform 0.3s ease;
   display: block;
+  transition: none !important;
+  transform: none !important;
 }
 
-.project-item:hover img {
-  transform: scale(1.08);
+.project-item img:hover {
+  transform: none !important;
+  transition: none !important;
 }
 
 .project-item h3 {
