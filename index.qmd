@@ -9,14 +9,15 @@ execute:
 ```{r}
 source("carousel/carousel.R")
 carousel("gallery-carousel", 5000, items = list(
-  list(image = "images/home/home1.jpg"),
-  list(image = "images/home/home2.jpg"),
-  list(image = "images/home/home3.jpg"),
-  list(image = "images/home/home4.jpg"),
-  list(image = "images/home/home5.jpg"),
-  list(image = "images/home/home6.jpg"),
-  list(image = "images/home/home7.jpg"),
-  list(image = "images/home/home8.jpg")
+  list(image = "images/home/home01.jpg"),
+  list(image = "images/home/home02.jpg"),
+  list(image = "images/home/home03.jpg"),
+  list(image = "images/home/home04.jpg"),
+  list(image = "images/home/home05.jpg"),
+  list(image = "images/home/home06.jpg"),
+  list(image = "images/home/home07.jpg"),
+  list(image = "images/home/home08.jpg"),
+  list(image = "images/home/home09.jpg")
 ))
 ```
 

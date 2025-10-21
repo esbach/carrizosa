@@ -8,4 +8,28 @@ page-layout: full
 
 **Email:** [hi\@cristinacarrizosa.com](mailto:hi@cristinacarrizosa.com)
 
-San Francisco interior design, hotel, and lifestyle photography. Available across the Bay Area and beyond.
+<style>
+/* Center text for contact page and remove h2 underline */
+#quarto-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 20vh;
+}
+
+#quarto-content {
+  text-align: center;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
+p {
+  text-align: center;
+}
+</style>

@@ -14,9 +14,7 @@ description: "Cristina Carrizosa's services, a commercial photographer specializ
 
 ## SERVICES
 
-Tailored visual content and creative support for boutique hotels, high-end vacation rentals, and interior design studios.
-
-Each service is designed to help design-forward brands tell their story through striking imagery, thoughtful styling, and intentional digital content. 
+Tailored visual content and creative support for boutique hotels, high-end vacation rentals, and interior design studios. Each service is designed to help design-forward brands tell their story through striking imagery, thoughtful styling, and intentional digital content. 
 
 ### Lifestyle Photography & Video
 
@@ -39,7 +37,7 @@ Authentic, engaging content created in a user-generated style, perfect for socia
 <style>
 /* Tighter line spacing and justified text for services page */
 .service-content p {
-  line-height: 1.2;
+  line-height: 1.3;
   text-align: justify;
 }
 

@@ -22,7 +22,7 @@ Cristina's background in advertising shapes her approach to visual storytelling,
 <style>
 /* Tighter line spacing and justified text for about page */
 .about-content p {
-  line-height: 1.2;
+  line-height: 1.3;
   text-align: justify;
 }
 

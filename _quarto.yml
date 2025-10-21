@@ -21,8 +21,15 @@ website:
     right:
       - href: about.qmd
         text: about
-      - href: portfolio.qmd
-        text: portfolio
+      - text: photography
+        menu:
+          - href: portfolio/spaces.qmd
+            text: spaces
+          - href: portfolio/people.qmd
+            text: people
+      - href: https://www.saatchiart.com/cristinacarrizosa?srsltid=AfmBOor7QF34xCyRj8s8SYTDANgva0d2FLMul333iss_B_u2kizqEZLg
+        text: art
+        target: _blank
       - href: services.qmd
         text: services
       - href: contact.qmd
