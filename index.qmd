@@ -352,7 +352,7 @@ main#quarto-document-content {
   border: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #gallery-carousel img {
     max-width: 70vw;
     max-height: 70vh;

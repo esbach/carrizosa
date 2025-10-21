@@ -136,30 +136,6 @@ a:hover {
   background-color: white !important;
 }
 
-/* Force hamburger to the right on mobile */
-@media (max-width: 991px) {
-  .navbar > .container-fluid {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-  }
-  
-  .navbar-brand {
-    order: 1 !important;
-    margin-right: 0 !important;
-  }
-  
-  .navbar-toggler {
-    order: 2 !important;
-    margin-left: auto !important;
-    margin-right: 1.75rem !important;
-  }
-  
-  .navbar-collapse {
-    order: 3 !important;
-    width: 100% !important;
-  }
-}
 
 /* Hide Bootstrap's default hamburger icon */
 .navbar-toggler .navbar-toggler-icon { 
@@ -405,7 +381,7 @@ a:hover {
 }
 
 /* Responsive grid */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .photo-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -606,7 +582,7 @@ a:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .masonry-grid {
     grid-template-columns: 1fr;
     gap: 0;
@@ -653,7 +629,7 @@ a:hover {
 }
 
 /* Responsive client section */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .client-header {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
@@ -721,7 +697,7 @@ a:hover {
 }
 
 /* Responsive grid */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -758,7 +734,7 @@ a:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .project-grid-4col {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -831,8 +807,8 @@ a:hover {
   flex: 0 0 40%;
 }
 
-/* Mobile responsive - single column layout */
-@media (max-width: 768px) {
+/* Mobile and iPad responsive - single column layout */
+@media (max-width: 1024px) {
   .about-page-layout {
     flex-direction: column;
     gap: 1rem;
@@ -907,7 +883,7 @@ a:hover {
    Responsive Design
    ============================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hero-section h1 {
     font-size: 2.5rem;
   }
@@ -1040,8 +1016,8 @@ img[src$=".gif"] {
   max-height: calc(100vh - 120px) !important;
 }
 
-/* Mobile lightbox adjustments */
-@media (max-width: 768px) {
+/* Mobile and iPad lightbox adjustments */
+@media (max-width: 1024px) {
   .glightbox-container .ginner-container {
     padding: 20px !important;
     max-width: 90vw !important;
@@ -1154,8 +1130,8 @@ footer.page-footer a:hover,
   opacity: 0.7 !important;
 }
 
-/* Mobile responsive styles */
-@media (max-width: 768px) {
+/* Mobile and iPad responsive styles */
+@media (max-width: 1024px) {
   /* Header adjustments - aggressive override like 991px */
   .navbar > .container-fluid {
     display: flex !important;

@@ -69,7 +69,7 @@ page-layout: full
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .projects-grid {
     flex-direction: column;
     gap: 2rem;

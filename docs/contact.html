@@ -379,22 +379,20 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 </header>
 
 
-<section id="get-in-touch" class="level2">
+<section id="get-in-touch" class="level2 contact-content">
 <h2 data-anchor-id="get-in-touch">Get In Touch</h2>
 <p><strong>Email:</strong> <a href="mailto:hi@cristinacarrizosa.com">hi@cristinacarrizosa.com</a></p>
+</section>
 <style>
 /* Center text for contact page and remove h2 underline */
-#quarto-content {
+.contact-content {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding-top: 20vh;
-}
-
-#quarto-content {
+  min-height: 60vh;
   text-align: center;
-  width: 100%;
+  padding: 2rem;
 }
 
 h2 {
@@ -403,13 +401,12 @@ h2 {
   text-decoration: none !important;
 }
 
-p {
+.contact-content p {
   text-align: center;
 }
 </style>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

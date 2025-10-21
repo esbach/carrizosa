@@ -1,26 +1,26 @@
 ---
 title: "Contact | Cristina Carrizosa Photography"
 description: "Contact Cristina Carrizosa for hospitality photography, lifestyle photography, and commercial photography services in Richmond, VA, San Francisco, and internationally."
-page-layout: full
 ---
+
+<div class="contact-content">
 
 ## Get In Touch
 
 **Email:** [hi\@cristinacarrizosa.com](mailto:hi@cristinacarrizosa.com)
 
+</div>
+
 <style>
 /* Center text for contact page and remove h2 underline */
-#quarto-content {
+.contact-content {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding-top: 20vh;
-}
-
-#quarto-content {
+  min-height: 60vh;
   text-align: center;
-  width: 100%;
+  padding: 2rem;
 }
 
 h2 {
@@ -29,7 +29,7 @@ h2 {
   text-decoration: none !important;
 }
 
-p {
+.contact-content p {
   text-align: center;
 }
 </style>
