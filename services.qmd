@@ -1,6 +1,7 @@
 ---
 title: "Services | Cristina Carrizosa Photography"
 description: "Cristina Carrizosa's services, a commercial photographer specializing in hospitality, lifestyle, and interior photography. Based in Richmond, VA with over 15 years of experience."
+page-layout: full
 ---
 
 <div class="service-page-layout">
