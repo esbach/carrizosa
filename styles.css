@@ -1039,8 +1039,27 @@ img[src$=".gif"] {
   max-height: calc(100vh - 120px) !important;
 }
 
-/* Mobile and iPad lightbox adjustments */
-@media (max-width: 1024px) {
+/* iPad lightbox adjustments - more padding than mobile */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .glightbox-container .ginner-container {
+    padding: 40px 20px !important;
+    max-width: 85vw !important;
+    margin: 0 auto !important;
+  }
+  
+  .gslide-image img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: calc(100vh - 100px) !important;
+  }
+  
+  .gslide-media {
+    max-width: 100% !important;
+  }
+}
+
+/* Mobile lightbox adjustments */
+@media (max-width: 768px) {
   .glightbox-container .ginner-container {
     padding: 20px !important;
     max-width: 90vw !important;
