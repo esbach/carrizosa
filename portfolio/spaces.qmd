@@ -7,11 +7,6 @@ format:
     page-layout: full
 ---
 
-::: {.project-intro}
-I create hospitality images that merge design and experience — showcasing the beauty of the space while evoking the sensory, human side of being there.
-:::
-
-
 ::: {.masonry-grid}
 ```{r}
 #| echo: false

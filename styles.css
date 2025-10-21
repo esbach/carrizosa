@@ -542,8 +542,9 @@ a:hover {
    ============================================ */
 
 .masonry-grid {
-  column-count: 3;
-  column-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   margin: 5rem auto 0 auto;
   max-width: 1600px;
   padding: 0 var(--content-padding) var(--spacing-lg);
@@ -560,11 +561,9 @@ a:hover {
 }
 
 .masonry-item {
-  break-inside: avoid;
   margin-bottom: 2rem;
   overflow: hidden;
   transition: all 0.3s ease;
-  page-break-inside: avoid;
 }
 
 /* Removed hover effects for cleaner gallery display */
@@ -572,11 +571,10 @@ a:hover {
 .masonry-item img,
 .gallery-img {
   width: 100%;
-  height: auto;
+  height: 500px;
+  object-fit: cover;
   display: block;
   transition: none;
-  break-inside: avoid;
-  page-break-inside: avoid;
   margin-bottom: 2rem;
   box-shadow: none;
 }
@@ -597,24 +595,26 @@ a:hover {
 /* Responsive masonry */
 @media (max-width: 1200px) {
   .masonry-grid {
-    column-count: 2;
-    column-gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
   
   .masonry-item img,
   .gallery-img {
+    height: 400px;
     margin-bottom: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
   .masonry-grid {
-    column-count: 1;
-    column-gap: 0;
+    grid-template-columns: 1fr;
+    gap: 0;
   }
   
   .masonry-item img,
   .gallery-img {
+    height: 350px;
     margin-bottom: 1.5rem;
   }
 }
@@ -794,7 +794,7 @@ a:hover {
 .about-image img {
   width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 0px;
 }
 
 .about-content {
@@ -824,7 +824,7 @@ a:hover {
 .service-image img {
   width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 0px;
 }
 
 .service-content {
@@ -1040,6 +1040,25 @@ img[src$=".gif"] {
   max-height: calc(100vh - 120px) !important;
 }
 
+/* Mobile lightbox adjustments */
+@media (max-width: 768px) {
+  .glightbox-container .ginner-container {
+    padding: 20px !important;
+    max-width: 90vw !important;
+    margin: 0 auto !important;
+  }
+  
+  .gslide-image img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: calc(100vh - 80px) !important;
+  }
+  
+  .gslide-media {
+    max-width: 100% !important;
+  }
+}
+
 /* ============================================
    Print Styles
    ============================================ */
@@ -1224,7 +1243,7 @@ footer.page-footer a:hover,
   }
   
   .nav-footer-center p {
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
     margin: 0 !important;
     padding: 0 !important;
   }

@@ -7,10 +7,6 @@ format:
     page-layout: full
 ---
 
-::: {.project-intro}
-I photograph people with an emphasis on authenticity and connection — capturing lifestyle moments, portraits, and fashion stories that feel natural, cinematic, and alive.
-:::
-
 ::: {.masonry-grid}
 ```{r}
 #| echo: false

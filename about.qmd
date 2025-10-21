@@ -9,16 +9,24 @@ description: "Learn about Cristina Carrizosa, a commercial photographer speciali
 :::
 
 ::: about-content
-## About Cristina
+## ABOUT
 
 Born in Colombia and raised in Ecuador, San Francisco–based photographer Cristina Carrizosa blends her deep-rooted passion for storytelling with more than fifteen years of experience behind the lens. Her photography reveals the feeling of a space—its rhythm, light, and design—through imagery that is both authentic and artfully composed. She collaborates with brands, designers, and hospitality teams to create visual stories that invite and inspire.
 
 Cristina's background in advertising shapes her approach to visual storytelling, helping her translate creative concepts into evocative imagery. She has worked with global brands including Marriott, Tiffany & Co., Adidas, and Amazon Kindle, among others. Her work has been featured in the American Photographic Artists' Top 100 Exhibit in San Francisco and honored with the Silver Award for Enhanced Photography from the Association for Communication Excellence.
 
-Photography, for Cristina, remains a constant adventure—each click of the shutter an exploration of authenticity and emotion. She seeks not just to document, but to capture the quiet narratives within spaces and moments that connect us.
-
-When she's not photographing interiors or the play of light across a room, you might find her at the park with her dog, Obi, visiting art museums, or in pursuit of the perfect slice of pizza.
-
 [Get in Touch](contact.qmd){.btn .btn-primary}
 :::
 :::::
+
+<style>
+/* Tighter line spacing and justified text for about page */
+.about-content p {
+  line-height: 1.2;
+  text-align: justify;
+}
+
+.about-content h2 {
+  line-height: 1.3;
+}
+</style>

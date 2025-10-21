@@ -6,22 +6,17 @@ page-layout: full
 
 :::::: projects-grid
 ::: project-item
-[![](images/portfolio/spaces/web/spaces04.jpg){alt="Spaces photography project by Cristina Carrizosa"}](portfolio/spaces.qmd)
+[![](images/portfolio/spaces/web/spaces07.jpg){alt="Spaces photography project by Cristina Carrizosa"}](portfolio/spaces.qmd)
 
-### Spaces
+### spaces
 :::
 
 ::: project-item
-[![](images/portfolio/people/web/people07.jpg){alt="People photography project by Cristina Carrizosa"}](portfolio/people.qmd)
+[![](images/portfolio/people/web/people04.jpg){alt="People photography project by Cristina Carrizosa"}](portfolio/people.qmd)
 
-### People
+### people
 :::
 
-::: project-item
-[![](images/portfolio/botanical/web/botanical08.jpg){alt="Botanical photography project by Cristina Carrizosa"}](portfolio/botanical.qmd)
-
-### Botanical
-:::
 ::::::
 
 ```{=html}
@@ -48,13 +43,14 @@ page-layout: full
   text-decoration: none;
   color: inherit;
   margin-bottom: 0rem;
+  border-radius: 0px !important;
 }
 
 .project-item img {
   height: 350px;
   aspect-ratio: 3/4 !important;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 0px !important;
   transition: transform 0.3s ease;
   display: block;
 }

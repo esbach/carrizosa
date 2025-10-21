@@ -6,72 +6,44 @@ description: "Cristina Carrizosa's services, a commercial photographer specializ
 <div class="service-page-layout">
 
 <div class="service-image">
-![](images/services/hospitality.webp){alt="Hospitality photography services"}
+![](images/services/services.jpg){alt="Photography Services"}
 </div>
 
 <div class="service-content">
 
 
-## Services
+## SERVICES
 
-Tailored photography and creative direction across Spaces, People, and Botanicals — capturing design, experience, and atmosphere with a cinematic yet timeless sensibility.
+Tailored visual content and creative support for boutique hotels, high-end vacation rentals, and interior design studios.
 
-### Hospitality & Interiors (Spaces)
+Each service is designed to help design-forward brands tell their story through striking imagery, thoughtful styling, and intentional digital content. 
 
-Distinct, design-driven imagery for boutique hotels, high-end vacation rentals, and interior design studios. My hospitality work blends architectural precision with lived-in warmth, creating visuals that reflect both the beauty and the feeling of a space.
+### Lifestyle Photography & Video
 
-**Includes:** interior photography, hospitality storytelling, design documentation, brand libraries
+Cinematic lifestyle photography and video services designed to elevate boutique hotels, luxury vacation rentals, and thoughtfully designed interiors. Each shoot is tailored to highlight the atmosphere, experience, and details that make your space unforgettable, helping you connect with design-conscious guests and clients through compelling visual storytelling.
 
-### Lifestyle & Portraits (People)
+### Art Direction & Styling
 
-Editorial and lifestyle imagery that captures authenticity and movement — from creative entrepreneurs and fashion brands to musicians and influencers. Each shoot is crafted to reflect your tone and brand identity while keeping a sense of spontaneity and realism.
+Art direction and on-site styling for brands that care about the details. From moodboards to final composition, this service ensures every visual element aligns with your aesthetic and tells a cohesive story. Ideal for interior designers and hospitality brands seeking intentional, design-led content that feels both elevated and effortless.
 
-**Includes:** lifestyle branding, portrait sessions, fashion campaigns, social content
+### Social Media Content Creation (UGC Style)
 
-### Artistic Projects
-
-Fine-art floral and botanical photography exploring color, form, and light. Current collaborations include the Dahlia Society of California, celebrating San Francisco’s official flower and its century-long cultural legacy.
-
-**Includes:** fine-art prints, editorial features, collaborations, commissions
-
-### Creative Direction & Styling
-
-Full-service creative direction for brands and interiors. From mood boards to composition and on-set styling, I ensure every visual element aligns with your aesthetic vision.
-
-**Includes:** concept development, on-site styling, set design, brand cohesion
-
-### Social Media & Content Creation
-
-Authentic, engaging visuals designed for digital platforms — short-form videos, reels, and user-generated content that feel organic yet intentional. Perfect for hospitality, lifestyle, and design brands seeking a consistent visual presence.
-
-**Includes:** short-form video, UGC-style photography, campaign packages
-
-## FAQs
-
-**Do you work with interior designers?**
-
-Absolutely. I regularly collaborate with interior designers in San Francisco to capture professional images of their projects. My interior photography emphasizes natural light, textures, and the unique character of each space.
-
-**Do you photograph boutique hotels and hospitality spaces in San Francisco?**
-
-Yes, I specialize in hospitality photography for boutique hotels, vacation rentals, and Airbnb properties in San Francisco and across the Bay Area. My focus is on creating inviting images that highlight design, atmosphere, and guest experience.
-
-**Do you offer lifestyle and branding photography?**
-
-In addition to interiors, I provide lifestyle and brand photography that helps businesses, creatives, and entrepreneurs tell their story through authentic, editorial-style imagery.
-
-**Where are you based, and do you travel for projects?**
-
-I am based in San Francisco, California, and serve the Bay Area. I also travel nationally and internationally for select projects, particularly hospitality and lifestyle photography assignments.
-
-**How can I book a photoshoot?**
-
-The easiest way is to reach me through my contact page or by email. Share a few details about your project, and I'll be happy to provide next steps, availability, and a customized proposal.
-
-**Contact:** hi@cristinacarrizosa.com
+Authentic, engaging content created in a user-generated style, perfect for social media campaigns, reels, and organic brand growth. This service blends natural storytelling with a polished look, giving boutique hotels, Airbnbs, and design studios scroll-stopping visuals that resonate with modern audiences.
 
 [Get in Touch](contact.qmd){.btn .btn-primary}
 
 </div>
 
 </div>
+
+<style>
+/* Tighter line spacing and justified text for services page */
+.service-content p {
+  line-height: 1.2;
+  text-align: justify;
+}
+
+.service-content h3 {
+  line-height: 1.3;
+}
+</style>

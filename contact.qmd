@@ -1,15 +1,11 @@
 ---
 title: "Contact | Cristina Carrizosa Photography"
 description: "Contact Cristina Carrizosa for hospitality photography, lifestyle photography, and commercial photography services in Richmond, VA, San Francisco, and internationally."
-page-layout: article
+page-layout: full
 ---
 
 ## Get In Touch
 
-I’d love to hear about your project and explore how we can collaborate. My work spans hospitality interiors and lifestyle imagery to fine art floral projects. Whether you’re a designer, brand, or creative collaborator, I bring an eye for detail and atmosphere to every assignment.
-
-### Reach Out
-
 **Email:** [hi\@cristinacarrizosa.com](mailto:hi@cristinacarrizosa.com)
 
-**Location:** Richmond, VA — San Francisco, CA — Quito, Ecuador
+San Francisco interior design, hotel, and lifestyle photography. Available across the Bay Area and beyond.

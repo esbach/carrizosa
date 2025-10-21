@@ -7,10 +7,6 @@ format:
     page-layout: full
 ---
 
-::: {.project-intro}
-Through flowers and botanical forms, I explore light, texture, and the quiet beauty of transience. My current work with the Dahlia Society of California celebrates San Francisco’s official flower and its century-long legacy of color, design, and devotion.
-:::
-
 ::: {.masonry-grid}
 ```{r}
 #| echo: false
