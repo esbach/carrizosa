@@ -113,6 +113,12 @@ View and purchase original paintings and artwork at [Saatchi Art](https://www.sa
   .project-item {
     width: 100%;
   }
+
+  .art-description {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
 }
 </style>
 ```
