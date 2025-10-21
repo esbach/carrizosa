@@ -582,7 +582,22 @@ a:hover {
   }
 }
 
-@media (max-width: 1024px) {
+/* iPad specific - 2 columns for better landscape image display */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .masonry-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .masonry-item img,
+  .gallery-img {
+    height: 400px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Mobile - single column */
+@media (max-width: 768px) {
   .masonry-grid {
     grid-template-columns: 1fr;
     gap: 0;
@@ -906,7 +921,7 @@ a:hover {
   }
   
   .portfolio-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
   
@@ -914,6 +929,14 @@ a:hover {
   .featured-work,
   .project-intro {
     padding: var(--spacing-md);
+  }
+}
+
+/* Mobile specific - single column for portfolio grid */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
