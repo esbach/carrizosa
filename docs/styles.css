@@ -1043,7 +1043,7 @@ img[src$=".gif"] {
 @media (min-width: 769px) and (max-width: 1024px) {
   .glightbox-container .ginner-container {
     padding: 40px 20px !important;
-    max-width: 60vw !important;
+    max-width: 75vw !important;
     margin: 0 auto !important;
   }
   
