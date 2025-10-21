@@ -1,7 +1,10 @@
 ---
 title: "Portfolio | Cristina Carrizosa Photography"
 description: "Explore Cristina Carrizosa's photography portfolio featuring hospitality, lifestyle, and commercial projects."
-page-layout: full
+format:
+  html:
+    lightbox: false
+    page-layout: full
 ---
 
 ::: {.text-center .art-description}
@@ -14,15 +17,15 @@ View and purchase original paintings and artwork at [Saatchi Art](https://www.sa
 
 :::::: projects-grid
 ::: project-item
-[![](images/art/art01.jpg){alt="Blue Painting by Cristina Carrizosa"}]()
+![](images/art/art01.jpg){alt="Blue Painting by Cristina Carrizosa" group="art"}
 :::
 
 ::: project-item
-[![](images/art/art02.jpg){alt="Conversations in Pastel Painting by Cristina Carrizosa"}]()
+![](images/art/art02.jpg){alt="Conversations in Pastel Painting by Cristina Carrizosa" group="art"}
 :::
 
 ::: project-item
-[![](images/art/art03.jpg){alt="Blue Watercolor by Cristina Carrizosa"}]()
+![](images/art/art03.jpg){alt="Blue Watercolor by Cristina Carrizosa" group="art"}
 :::
 
 ::::::
