@@ -424,13 +424,11 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 
 /* Portfolio Grid - Clean Setup */
 .projects-grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   min-height: 60vh;
   padding: 2rem;
-  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -474,9 +472,9 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .projects-grid {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 2rem;
     padding: 0 1rem;
   }

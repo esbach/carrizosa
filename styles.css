@@ -381,16 +381,10 @@ a:hover {
 }
 
 /* Responsive grid */
-@media (max-width: 1024px) {
-  .photo-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .photo-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
@@ -520,7 +514,7 @@ a:hover {
 .masonry-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
   margin: 5rem auto 0 auto;
   max-width: 1600px;
   padding: 0 var(--content-padding) var(--spacing-lg);
@@ -537,7 +531,7 @@ a:hover {
 }
 
 .masonry-item {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -547,52 +541,35 @@ a:hover {
 .masonry-item img,
 .gallery-img {
   width: 100%;
-  height: 500px;
+  height: 400px;
+  aspect-ratio: 5/7;
   object-fit: cover;
+  object-position: center;
   display: block;
   transition: none;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   box-shadow: none;
 }
 
 /* Removed hover effects for gallery images */
 
-/* Enhanced masonry with better spacing */
-.masonry-grid .gallery-img:nth-child(3n+1) {
-  /* Every 3rd image starting from 1st - slightly more space */
-  margin-bottom: 2.2rem;
-}
+/* Enhanced masonry with better spacing - removed individual margins */
 
-.masonry-grid .gallery-img:nth-child(5n) {
-  /* Every 5th image - special emphasis */
-  margin-bottom: 2.5rem;
-}
-
-/* Responsive masonry */
-@media (max-width: 1200px) {
+/* Tablet - 2 columns */
+@media (max-width: 1024px) and (min-width: 769px) {
   .masonry-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
   
   .masonry-item img,
   .gallery-img {
-    height: 400px;
-    margin-bottom: 1.5rem;
-  }
-}
-
-/* iPad specific - 2 columns for better landscape image display */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .masonry-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-  
-  .masonry-item img,
-  .gallery-img {
-    height: 400px;
-    margin-bottom: 1.5rem;
+    width: 100%;
+    height: 450px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 0;
   }
 }
 
@@ -605,7 +582,11 @@ a:hover {
   
   .masonry-item img,
   .gallery-img {
-    height: 350px;
+    width: 100%;
+    height: 400px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    object-position: center;
     margin-bottom: 1.5rem;
   }
 }
@@ -644,7 +625,7 @@ a:hover {
 }
 
 /* Responsive client section */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .client-header {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
@@ -712,7 +693,7 @@ a:hover {
 }
 
 /* Responsive grid */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -743,20 +724,14 @@ a:hover {
 }
 
 /* Responsive project grid */
-@media (max-width: 1200px) {
-  .project-grid-4col {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 769px) {
   .project-grid-4col {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .project-grid-4col {
     grid-template-columns: 1fr;
   }
@@ -822,8 +797,8 @@ a:hover {
   flex: 0 0 40%;
 }
 
-/* Mobile and iPad responsive - single column layout */
-@media (max-width: 1024px) {
+/* Mobile responsive - single column layout */
+@media (max-width: 768px) {
   .about-page-layout {
     flex-direction: column;
     gap: 1rem;
@@ -898,7 +873,38 @@ a:hover {
    Responsive Design
    ============================================ */
 
-@media (max-width: 1024px) {
+/* Tablet responsive styles */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.1rem;
+  }
+  
+  h1 {
+    font-size: 2.25rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .about-preview,
+  .featured-work,
+  .project-intro {
+    padding: var(--spacing-md);
+  }
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
   .hero-section h1 {
     font-size: 2.5rem;
   }
@@ -921,7 +927,7 @@ a:hover {
   }
   
   .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
   
@@ -929,14 +935,6 @@ a:hover {
   .featured-work,
   .project-intro {
     padding: var(--spacing-md);
-  }
-}
-
-/* Mobile specific - single column for portfolio grid */
-@media (max-width: 768px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 }
 
@@ -1039,7 +1037,7 @@ img[src$=".gif"] {
   max-height: calc(100vh - 120px) !important;
 }
 
-/* iPad lightbox adjustments - more padding than mobile */
+/* Tablet lightbox adjustments - more padding than mobile */
 @media (min-width: 769px) and (max-width: 1024px) {
   .glightbox-container .ginner-container {
     padding: 40px 20px !important;
@@ -1172,8 +1170,94 @@ footer.page-footer a:hover,
   opacity: 0.7 !important;
 }
 
-/* Mobile and iPad responsive styles */
-@media (max-width: 1024px) {
+/* Override Bootstrap's default navbar behavior */
+@media (min-width: 769px) {
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: row !important;
+  }
+  
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+  }
+}
+
+/* Specific fix for 930px range where Bootstrap tries to collapse */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto !important;
+    flex-grow: 0 !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: auto !important;
+  }
+  
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+  }
+}
+
+/* Ensure desktop navbar for tablet and desktop */
+@media (min-width: 769px) {
+  .navbar-toggler {
+    display: none !important;
+  }
+  
+  .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto !important;
+    flex-grow: 0 !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    justify-content: flex-end !important;
+  }
+  
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-left: auto !important;
+  }
+  
+  .navbar {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  
+  .navbar > .container-fluid {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+  }
+}
+
+/* Specific fix for desktop range above 992px */
+@media (min-width: 993px) {
+  .navbar-collapse {
+    justify-content: flex-end !important;
+    margin-left: auto !important;
+  }
+  
+  .navbar-nav {
+    margin-left: auto !important;
+    justify-content: flex-end !important;
+  }
+  
+  .navbar > .container-fluid {
+    justify-content: space-between !important;
+  }
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
   /* Header adjustments - aggressive override like 991px */
   .navbar > .container-fluid {
     display: flex !important;
