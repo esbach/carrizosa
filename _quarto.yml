@@ -18,6 +18,7 @@ website:
   favicon: "images/favicon.webp"
   search: false
   navbar:
+    collapse-below: md
     right:
       - href: about.qmd
         text: about

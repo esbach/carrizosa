@@ -3,7 +3,7 @@ title: "Portfolio | Cristina Carrizosa Photography"
 description: "Explore Cristina Carrizosa's photography portfolio featuring hospitality, lifestyle, and commercial projects."
 format:
   html:
-    lightbox: false
+    lightbox: true
     page-layout: full
 ---
 
@@ -13,22 +13,23 @@ format:
 My work is primarily focused on minimalist and abstract art, using a mix of acrylics and mixed media to explore the emotional impact of color, form, and space. Drawing inspiration from the stillness of nature and personal reflection, I create pieces that encourage introspection and connection. Each work balances simple shapes, a restrained color palette, and subtle textures to evoke a sense of calm, contemplation, and depth.
 
 View and purchase original paintings and artwork at [Saatchi Art](https://www.saatchiart.com/cristinacarrizosa?srsltid=AfmBOor7QF34xCyRj8s8SYTDANgva0d2FLMul333iss_B_u2kizqEZLg){target="_blank"}
+
+<br>
 :::
 
-:::::: projects-grid
-::: project-item
-![](images/art/art01.jpg){alt="Blue Painting by Cristina Carrizosa" group="art"}
-:::
+::: {.masonry-grid}
+```{r}
+#| echo: false
+#| results: asis
 
-::: project-item
-![](images/art/art02.jpg){alt="Conversations in Pastel Painting by Cristina Carrizosa" group="art"}
-:::
+# Auto-generate masonry grid from folder
+image_files <- list.files("images/art", full.names = TRUE, pattern = "\\.(jpg|jpeg|png|webp|gif)$")
 
-::: project-item
-![](images/art/art03.jpg){alt="Blue Watercolor by Cristina Carrizosa" group="art"}
+for (img in image_files) {
+  cat(sprintf('![](%s){.gallery-img loading="lazy" group="art"}\n\n', img))
+}
+```
 :::
-
-::::::
 
 ```{=html}
 <style>
@@ -54,67 +55,8 @@ View and purchase original paintings and artwork at [Saatchi Art](https://www.sa
   opacity: 0.8;
 }
 
-/* Portfolio Grid - Clean Setup */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  min-height: 60vh;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.project-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.project-item a {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  margin-bottom: 0rem;
-  border-radius: 0px !important;
-}
-
-.project-item img {
-  height: 350px;
-  aspect-ratio: 3/4 !important;
-  object-fit: cover;
-  border-radius: 0px !important;
-  display: block;
-  transition: none !important;
-  transform: none !important;
-}
-
-.project-item img:hover {
-  transform: none !important;
-  transition: none !important;
-}
-
-.project-item h3 {
-  font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
-  color: var(--primary-color);
-  font-size: 1.2rem;
-  font-weight: 400;
-  margin: 0;
-  text-align: center;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 0 1rem;
-  }
-  
-  .project-item {
-    width: 100%;
-  }
-
   .art-description {
     padding-left: 2rem !important;
     padding-right: 2rem !important;

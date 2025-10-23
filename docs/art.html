@@ -37,6 +37,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-f66a21822ea3e798333cd0e3f02b4107.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -289,11 +292,9 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <meta property="og:description" content="Explore Cristina Carrizosa’s photography portfolio featuring hospitality, lifestyle, and commercial projects.">
 <meta property="og:image" content="https://cristinacarrizosa.com/images/art/art01.jpg">
 <meta property="og:site_name" content="CRISTINA CARRIZOSA">
-<meta property="og:image:alt" content="Blue Painting by Cristina Carrizosa">
 <meta name="twitter:title" content="Portfolio | Cristina Carrizosa Photography – CRISTINA CARRIZOSA">
 <meta name="twitter:description" content="Explore Cristina Carrizosa’s photography portfolio featuring hospitality, lifestyle, and commercial projects.">
 <meta name="twitter:image" content="https://cristinacarrizosa.com/images/art/art01.jpg">
-<meta name="twitter:image:alt" content="Blue Painting by Cristina Carrizosa">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -301,7 +302,7 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
@@ -387,17 +388,12 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
 <h1>Art</h1>
 <p>My work is primarily focused on minimalist and abstract art, using a mix of acrylics and mixed media to explore the emotional impact of color, form, and space. Drawing inspiration from the stillness of nature and personal reflection, I create pieces that encourage introspection and connection. Each work balances simple shapes, a restrained color palette, and subtle textures to evoke a sense of calm, contemplation, and depth.</p>
 <p>View and purchase original paintings and artwork at <a href="https://www.saatchiart.com/cristinacarrizosa?srsltid=AfmBOor7QF34xCyRj8s8SYTDANgva0d2FLMul333iss_B_u2kizqEZLg" target="_blank">Saatchi Art</a></p>
+<p><br></p>
 </section>
-<div class="projects-grid">
-<div class="project-item">
-<p><img src="images/art/art01.jpg" class="img-fluid" alt="Blue Painting by Cristina Carrizosa" data-group="art"></p>
-</div>
-<div class="project-item">
-<p><img src="images/art/art02.jpg" class="img-fluid" alt="Conversations in Pastel Painting by Cristina Carrizosa" data-group="art"></p>
-</div>
-<div class="project-item">
-<p><img src="images/art/art03.jpg" class="img-fluid" alt="Blue Watercolor by Cristina Carrizosa" data-group="art"></p>
-</div>
+<div class="masonry-grid">
+<p><a href="images/art/art01.jpg" class="lightbox" data-gallery="art"><img src="images/art/art01.jpg" class="gallery-img img-fluid" loading="lazy"></a></p>
+<p><a href="images/art/art02.jpg" class="lightbox" data-gallery="art"><img src="images/art/art02.jpg" class="gallery-img img-fluid" loading="lazy"></a></p>
+<p><a href="images/art/art03.jpg" class="lightbox" data-gallery="art"><img src="images/art/art03.jpg" class="gallery-img img-fluid" loading="lazy"></a></p>
 </div>
 <style>
 /* Art Description - Match Grid Width */
@@ -422,67 +418,8 @@ gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true});
   opacity: 0.8;
 }
 
-/* Portfolio Grid - Clean Setup */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  min-height: 60vh;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.project-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.project-item a {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  margin-bottom: 0rem;
-  border-radius: 0px !important;
-}
-
-.project-item img {
-  height: 350px;
-  aspect-ratio: 3/4 !important;
-  object-fit: cover;
-  border-radius: 0px !important;
-  display: block;
-  transition: none !important;
-  transform: none !important;
-}
-
-.project-item img:hover {
-  transform: none !important;
-  transition: none !important;
-}
-
-.project-item h3 {
-  font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
-  color: var(--primary-color);
-  font-size: 1.2rem;
-  font-weight: 400;
-  margin: 0;
-  text-align: center;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 0 1rem;
-  }
-  
-  .project-item {
-    width: 100%;
-  }
-
   .art-description {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
@@ -940,6 +877,38 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

@@ -1181,6 +1181,21 @@ footer.page-footer a:hover,
   }
 }
 
+/* Force hamburger menu at 768px and below to avoid weird layout */
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block !important;
+  }
+  
+  .navbar-collapse {
+    display: none !important;
+  }
+  
+  .navbar-collapse.show {
+    display: block !important;
+  }
+}
+
 /* Specific fix for 930px range where Bootstrap tries to collapse */
 @media (min-width: 769px) and (max-width: 1024px) {
   .navbar-collapse {
